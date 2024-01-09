@@ -1,0 +1,210 @@
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --main: #d92e15;
+  --deeb: #1d242f;
+  --dark: #222c3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Golos Text', sans-serif;
+}
+
+
+a {
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+i.fi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  padding: 10px 12px;
+  border: none;
+  color: inherit;
+  outline-color: var(--main);
+}
+
+button {
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+ul.list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+ul.list li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+}
+
+.newyear {
+  width: 100%;
+  height: 100px;
+  background: transparent url('../img/full.png') left/contain;
+  mix-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  margin-top: 75px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+}
+
+.top_bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top_bar ul.list {
+  font-size: 12px;
+  color: var(--deeb);
+  font-weight: 400;
+}
+
+.top_bar ul.list li a:hover {
+  color: #000;
+}
+
+ul.lang {
+  display: none;
+}
+
+.main_bar {
+  background: #fff;
+}
+
+.main_bar .main_bar_content {
+  padding: 10px 0;
+  margin: auto;
+  width: 1440px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main_bar.sticky1 {
+  margin: auto;
+  width: inherit;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main_bar .logo {
+  margin: 0 20px 0 0;
+  width: 155px;
+}
+
+.main_bar .category {
+  padding: 15px 20px;
+  background: var(--main);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  font-weight: 500;
+}
+
+.main_bar form.search {
+  min-width: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main_bar form.search input {
+  width: 100%;
+  font-weight: 500;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.main_bar form.search button {
+  margin: auto;
+  width: fit-content;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  background: var(--main);
+}
+
+.main_bar ul.main_menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.main_bar ul.main_menu li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.main_bar ul.main_menu li a i {
+  font-size: 22px;
+}

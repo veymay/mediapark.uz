@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --main: #d92e15;
+  --primary: #d92e15;
+  --primary_overlay: #fdf3f1;
+  --secondary: #50cd47;
   --deeb: #1d242f;
   --dark: #222c3a;
+  --inactive: #6c7178;
 }
 
 * {
@@ -35,7 +38,7 @@ input {
   padding: 10px 12px;
   border: none;
   color: inherit;
-  outline-color: var(--main);
+  outline-color: var(--primary);
 }
 
 button {
@@ -43,6 +46,46 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+}
+
+.overlay1 {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.32);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: .1s;
+  z-index: 999;
+}
+
+.badge {
+  margin: 0 30px 0 0;
+  padding: 10px 25px;
+  background: url('../img/aksiya.svg') no-repeat center/contain;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.title {
+  margin: 30px 0 20px;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--deeb);
+  display: flex;
+  align-items: center;
+}
+
+.title .more {
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 ul.list {
@@ -55,11 +98,21 @@ ul.list li a {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--inactive);
+}
+
+ul.list li a:hover {
+  color: var(--dark);
 }
 
 .container {
   width: 1440px;
   margin: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
 }
 
 .newyear {
@@ -73,13 +126,13 @@ ul.list li a {
 }
 
 .header {
+  height: 109px;
   margin-top: 75px;
   display: flex;
   gap: 25px;
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 9;
 }
 
 .top_bar {
@@ -95,8 +148,8 @@ ul.list li a {
   font-weight: 400;
 }
 
-.top_bar ul.list li a:hover {
-  color: #000;
+.top_bar ul.list:last-child {
+  margin-left: auto;
 }
 
 ul.lang {
@@ -116,7 +169,7 @@ ul.lang {
   gap: 30px;
 }
 
-.main_bar.sticky1 {
+.main_bar.sticky {
   margin: auto;
   width: inherit;
   background: #fff;
@@ -124,6 +177,12 @@ ul.lang {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
 }
 
 .main_bar .logo {
@@ -133,7 +192,7 @@ ul.lang {
 
 .main_bar .category {
   padding: 15px 20px;
-  background: var(--main);
+  background: var(--primary);
   color: #fff;
   display: flex;
   align-items: center;
@@ -184,7 +243,7 @@ ul.lang {
   top: 5px;
   bottom: 5px;
   right: 5px;
-  background: var(--main);
+  background: var(--primary);
 }
 
 .main_bar ul.main_menu {
@@ -207,4 +266,96 @@ ul.lang {
 
 .main_bar ul.main_menu li a i {
   font-size: 22px;
+}
+
+.popular {
+  margin: 0 0 20px;
+}
+
+.slider .swiper {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-button-next {
+  right: 30px;
+}
+
+.swiper-button-prev {
+  left: 30px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  background: rgba(218, 218, 220, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--primary);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.swiper-button-next:after {
+  margin-left: 3px;
+}
+
+.swiper-button-prev:after {
+  margin-left: -3px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+}
+
+.categorys {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.categorys .item {
+  padding: 20px;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-weight: 600;
+  gap: 20px;
+}
+
+.categorys .item span {
+  min-width: 50px;
+  min-height: 50px;
+  background: var(--primary_overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 32px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }

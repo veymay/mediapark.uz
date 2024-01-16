@@ -83,9 +83,38 @@ button {
 }
 
 .title .more {
+  padding: 10px 0;
   margin-left: auto;
   font-weight: 500;
   font-size: 16px;
+  position: relative;
+  font-weight: 600;
+}
+
+.title .more:before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: var(--primary);
+  position: absolute;
+  bottom: -2px;
+  left: auto;
+  right: 0;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+}
+
+.title .more:hover:before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.title .more:hover {
+  color: var(--primary);
 }
 
 ul.list {
@@ -342,6 +371,15 @@ ul.lang {
   -o-border-radius: 10px;
   font-weight: 600;
   gap: 20px;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+}
+
+.categorys .item:hover {
+  box-shadow: inset 0 0 5px var(--primary);
 }
 
 .categorys .item span {
@@ -358,4 +396,73 @@ ul.lang {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+.productSlide .swiper-slide {
+  max-width: 220px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.productSlide .swiper-slide .price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.productSlide .swiper-slide .credit {
+  padding: 5px;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  font-size: 14px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.productSlide .swiper-slide .bonus {
+  font-size: 12px;
+}
+
+.productSlide .swiper-slide:hover {
+  border: 2px solid var(--primary_overlay);
+
+}
+
+.productSlide .swiper-slide .btns {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.productSlide .swiper-slide .btns button {
+  background: #ccc;
+  width: 100%;
+  padding: 10px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: var(--inactive);
+}
+
+.productSlide .swiper-slide .btns button:first-child {
+  width: 120%;
+  font-size: 24px;
+  background: var(--primary);
+  color: #fff;
 }
